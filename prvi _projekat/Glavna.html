@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jecin Sajt</title>
+    <link rel="stylesheet" href="./stajlovanje.css">
+</head>
+<body>
+    <h1>Web development!</h1>
+	<h2> Ucimo. Lekcija 3 </h2>
+	<p> Naucila sam: </p>
+	<ul>
+      <li> Tagove</li>	
+	  <li> Link, slika</li>
+	     <li> <a href = "pomocna.html" target="_blank" > Ovaj link ovde koji vodi na drugu stranu...</a> 
+	     </li>
+      <li> Malo CSS oko formatiranja teksta... </li>		
+	</ul>
+    <p>Ovo je moj prvi HTML dokument.<br> Ako zelis na net, klikni ovde!</p>
+	<a href="http://www.google.com" target="_blank"> GUGL</a>
+<br>
+<br>
+<p> Sad cu da napravim tabelu: </p>
+<!-- 1. definisem 1. red i nazive headinga (kolona)
+     2. drugi red i njegove celije
+     3. treci red i tako dalje....-->
+<table>
+ <tr>    <!--table row-->
+   <th>Ime</th>   <!--table header-->
+   <th>Prezime</th>
+   <th>Email</th>
+ </tr>
+ <tr> 
+   <td>Pera</td>  <!--table data-->
+   <td>Zikic</td>
+   <td>perazikic@gmail.com </td>
+ </tr>
+ </table>
+ 
+ 
+ <h2> Ovde sad pravim formu: </h2>
+ 
+<form action="JECA"
+      method="POST"
+>       
+   <label for = "Ime"> Ime </label>
+   <input type="text" id="Ime" placeholder="Ovde upisi ime">
+   <br>
+   <label for = "Prezime" > Prezime </label>
+   <input type="text" id="Prezime" placeholder="Ovde napisi prezime">
+ <button type="submit"> Posalji </button>
+   
+ <!-- ovde je spomenut formspree koji sluzi kao
+  mala baza sto posreduje izmedju vebsajta i mog kompa
+  i link ka njemu treba da stoji umesto onog JECA-->
+</form>
+<br>
+<img src="./owls.jpg" alt="slika sovice" width="50">
+<h3> Trenutna rabota...: </h3>
+
+<ul style="color:green; font-size:14px;">
+  <li>Bockanje sovica..</li>
+  <li>Akrilna slika na cekanju..</li>
+  <li>YT kanal OET1</li>
+  <li>Redbubble zapusten</li>
+  <li>Ucenje nemackog</li>
+  <li>Web dizajn ucenje:HTML</li>
+</ul>
+
+<h3> Ovde cu napraviti posebnu stranicu za CSS i klase: </h3>
+  <a href = "cssvezba.html" target ="a _blank"> CSS objasnjenja </a>
+
+<!--LEKCIJA 6 - DIV i SPAN
+   div je blok element, prilagodjava se
+   velicini prozora; highlight ide do kraja prozora,
+   za razliku od SPAN elementa -->
+
+<div class="blok">
+  <h3> Naslov u divu. </h3>
+  <p>ovo je unutar div-a. 
+    Fora je da bude neki dugi tekst, 
+    jer blok element ce da se sazme 
+    ako ja povecam ili smanjim prozor. <span class="inline"> Lorem ipsum dolor sit amet
+    </span> ..Ovo je bio span.</p>
+  </div>
+
+  <div class="klasa">
+    <h1>ja sam naslov</h1>
+    <h2 class="inline"> ja sam naslednik... </h2>
+<!--deca nasledjuju osobine klase diva dok ne dobiju svoje-->
+  </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+} 
+.naslov{
+    padding-top: 10px;
+     height: 100px;
+     opacity: 0.1;
+     color:white;
+     text-align: center;
+     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-style: italic;
+     /* line-height: 30px; */
+     opacity: 0.5;
+     display: inline;
+    }
+
+.meni {
+    padding:0;
+     height: 25px;
+     background-color: rgba(255, 255, 255, 0.1);
+     text-align: center;
+         }   
+    ul{padding:0}
+    ul li {
+        display: inline;
+        margin-right: 5px;
+
+    }
+    ul li a {
+        text-decoration: none;
+        color: white;
+        /* font-weight: bold; */
+        
+    }
+.kafa1 {
+    margin:0;
+    border: 0;
+    height:500px;
+    /* padding-left: 10px; */
+  background: url("./kafa1.png"); 
+  background-size: cover;
+  background-position:center;
+
+}
+
+.kafa2 {
+    height:500px;
+background:url("./pozadina.png");
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+}
+
+.kafa3 {
+    height:1200px;
+background: url("./vertikala.png");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.footer{
+
+
+}
