@@ -1,65 +1,101 @@
 * {
     margin: 0px;
 } 
-.naslov{
-    padding-top: 10px;
-     height: 100px;
-     opacity: 0.1;
-     color:white;
+@font-face {
+    font-family: "Awesome";
+    src: url(./awesome/Awesome.ttf);
+}
+.naslov h1{
+    font-size: 6.5rem;
+     color: white;
      text-align: center;
-     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-     font-style: italic;
-     /* line-height: 30px; */
-     opacity: 0.5;
-     display: inline;
+     font-family:'Awesome';
+     letter-spacing: 1rem;
+     line-height: 7rem;
+     opacity: 0.93;
+     
     }
-
-.meni {
-    padding:0;
-     height: 25px;
-     background-color: rgba(255, 255, 255, 0.1);
-     text-align: center;
-         }   
-    ul{padding:0}
-    ul li {
-        display: inline;
-        margin-right: 5px;
-
-    }
-    ul li a {
-        text-decoration: none;
-        color: white;
-        /* font-weight: bold; */
+    .naslov {
+        position:absolute;
+        top:60%;
+        left: 50%;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        /* Ovde sam se namucila sa centriranjem teksta
+         da bude na centru strane. Chat GPT kaze da top i left
+         odmaknu slova 50% od parenta, ali to se odnosi na
+         ivicu ovog naslova! sa translate-om mi ovo popravimo
+         tako sto ga vratimo za 50% NJEGOVE visine/sirine.*/
         
     }
-.kafa1 {
-    margin:0;
-    border: 0;
-    height:500px;
-    /* padding-left: 10px; */
-  background: url("./kafa1.png"); 
-  background-size: cover;
-  background-position:center;
+
+.header {
+    margin:0 0;
+    padding-top: 30px;
+    height:90px;
+    background:linear-gradient(rgba(50,50,0,0.2), rgba(50,0,0,0.7));
+    text-align: center;
 
 }
 
-.kafa2 {
+
+.zrno {
+    margin-right: 1.8rem;
+    margin-left: 1.3rem;
+    display: inline-block;
+
+}
+.zrno:hover{
+
+    transform: translateY(-7px);
+}
+
+.zrno-vel {
+  width: 30px;
+  height: 40px;
+
+}
+.header nav{
+    left:-10%;
+}
+.header nav ul{
+    padding-left: 0;
+       /* ovo je zato sto je ul imao po
+    defaultu neki peding i pomerao mi je
+    ceo meni u desnu stranu */
+}
+.header nav ul li {
+    display: inline;
+    margin-right: 1rem;
+ 
+}
+.header nav ul li a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color:black;
+    font-family: "Awesome";
+    letter-spacing:0.1rem;
+    
+}
+
+.kafa_hero {
     height:500px;
-background:url("./pozadina.png");
-background-size: cover;
-background-position: center;
-background-attachment: fixed;
+    background:url("./pozadina.png");
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
 }
 
 .kafa3 {
-    height:1200px;
+    height:500px;
 background: url("./vertikala.png");
 background-repeat: no-repeat;
 background-size: cover;
 }
 /* pseudo elementi... */
-p::before {
+/* p::before {
     content: "*"}
 p::after {
     content:"*";
-};
+}; */
