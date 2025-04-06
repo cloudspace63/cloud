@@ -17,7 +17,7 @@
     }
     .naslov {
         position:absolute;
-        top:60%;
+        top:70%;
         left: 50%;
         z-index: 2;
         transform: translate(-50%, -50%);
@@ -79,7 +79,7 @@
 }
 
 .kafa_hero {
-    height:500px;
+    height:700px;
     background:url("./pozadina.png");
     background-size: cover;
     background-attachment: fixed;
@@ -88,7 +88,7 @@
 }
 
 .kafa3 {
-    height:500px;
+    height:1000px;
 background: url("./vertikala.png");
 background-repeat: no-repeat;
 background-size: cover;
