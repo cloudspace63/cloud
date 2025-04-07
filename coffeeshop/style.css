@@ -17,16 +17,18 @@
     }
     .naslov {
         position:absolute;
-        top:70%;
+        top: 50%;
         left: 50%;
         z-index: 2;
         transform: translate(-50%, -50%);
+        display: flex;
+
         /* Ovde sam se namucila sa centriranjem teksta
          da bude na centru strane. Chat GPT kaze da top i left
          odmaknu slova 50% od parenta, ali to se odnosi na
          ivicu ovog naslova! sa translate-om mi ovo popravimo
          tako sto ga vratimo za 50% NJEGOVE visine/sirine.*/
-        
+        /* bio je problem na velikom ekranu */
     }
 
 .header {
