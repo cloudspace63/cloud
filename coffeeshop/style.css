@@ -1,5 +1,6 @@
 * {
     margin: 0px;
+    padding:0px;
 } 
 @font-face {
     font-family: "Awesome";
@@ -127,13 +128,10 @@ p::after {
 }
 
 .kolona {
-    top:0.8rem;
-    left:0.5rem;
-    width:32%;
-    /* height:40vh; */
-    box-sizing: border-box;
-    display:inline-block;
-    position: relative;
+    /* left:0.5rem; */
+    top:1rem;
+    width:32.3%;
+    /* display: inline-block; */
 
 }
 
@@ -144,14 +142,29 @@ p::after {
     
 
 }
-.kolona1 {
-    left:0.5rem;
-    top:3rem;
-    width:32%;
-    /* height:30vh; */
-    box-sizing: border-box;
-    display:inline-block;
-    /* padding: 0; */
-    position: relative;
-
+.container {
+    height: 1000px;
+    display:inline-flex;
+    padding-top: 5px;
+    margin: 0;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
+
+
+
+@media screen and (max-width: 576px) {
+        
+        .kolona {
+            float:left;
+            width:100%;
+            
+ }
+}
+
+
+   
+ 
+
+
