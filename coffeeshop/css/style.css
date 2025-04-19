@@ -4,7 +4,7 @@
 } 
 @font-face {
     font-family: "Awesome";
-    src: url(./awesome/Awesome.ttf);
+    src: url(../awesome/Awesome.ttf);
 }
 .naslov h1{
     font-size: 6.5rem;
@@ -36,7 +36,7 @@
     margin:0 0;
     padding-top: 30px;
     height:90px;
-    background:linear-gradient(rgba(50,50,0,0.2), rgba(50,0,0,0.7));
+    background:linear-gradient(rgba(50,50,0,0.2), rgba(80,10,0,0.7));
     text-align: center;
 
 }
@@ -83,7 +83,7 @@
 
 .kafa_hero {
     height:700px;
-    background:url("./pozadina.png");
+    background:url("../slike/pozadina.png");
     background-size: cover;
     background-attachment: fixed;
     position: relative;
@@ -92,7 +92,7 @@
 
 .kafa3 {
     height:1000px;
-background: url("./vertikala.png");
+background: url("../slike/vertikala.png");
 background-repeat: no-repeat;
 background-size: cover;
 }
@@ -169,6 +169,31 @@ p::after {
 
 
    
- 
+
+ .sekcija {
+
+    padding-top:20px;
+    height: 200px;
+    background:rgba(80,50,0,0.2);
+    display:flex;
+    align-items: center;
+    justify-content: left;
+    flex-direction: column;
+ }
+.kontakt{
+    padding:10px;
+    
+
+}
+
+ .ikonice {
+font-size: 1.5rem;
+
+ }
+
+ .text {
+    font-size:1rem;
+    display:inline;
+ }
 
 
