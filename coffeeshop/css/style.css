@@ -180,7 +180,7 @@ p::after {
 }
 @media screen and (max-width: 390px) {
         
-    .naslov h1{ font-size: 2.5rem;}
+    .naslov h1{ font-size: 3.5rem;}
 }
 @media screen and (max-width: 292px) {
         
