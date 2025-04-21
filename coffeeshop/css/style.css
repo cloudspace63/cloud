@@ -18,6 +18,7 @@
      letter-spacing: 1rem;
      line-height: 7rem;
      opacity: 0.93;
+     text-shadow: 0 0 8px  #3e2723, 0 0 20px  #3e2723;
      
     }
     .naslov {
@@ -26,7 +27,7 @@
         left: 50%;
         z-index: 2;
         transform: translate(-50%, -50%);
-        display: flex;
+     
 
         /* Ovde sam se namucila sa centriranjem teksta
          da bude na centru strane. Chat GPT kaze da top i left
@@ -42,15 +43,13 @@
     height:90px;
     background:linear-gradient(rgba(50,50,0,0.2), rgba(80,10,0,0.7));
     text-align: center;
-
 }
-
 
 .zrno {
     margin-right: 1.8rem;
     margin-left: 1.3rem;
     display: inline-block;
-
+    animation: mrdaj 1s ease-in-out infinite;
 }
 .zrno:hover{
 
@@ -58,8 +57,8 @@
 }
 
 .zrno-vel {
-  width: 30px;
-  height: 40px;
+  width: 40px;
+  height: 50px;
 
 }
 .header nav{
@@ -92,6 +91,9 @@
     background-attachment: fixed;
     position: relative;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .kafa3 {
@@ -169,11 +171,20 @@ p::after {
             font-size: 2rem;
 
         }
+        .naslov h1{
+            font-size: 4rem;
+
+        }
             
 }
+@media screen and (max-width: 390px) {
+        
+    .naslov h1{
+        font-size: 2.5rem;
 
-
-   
+    }
+        
+}
 
  .sekcija {
 
@@ -202,3 +213,30 @@ font-size: 1.5rem;
  }
 
 
+#kafeno {
+    animation: sleva 1s ease-out; /* Ja zadam ime animacije */
+}
+#carstvo {
+
+    animation: sdesna 1s ease-out; /* Ja zadam ime animacije */
+}
+
+
+@keyframes sleva {
+0% {transform: translateX(-300px); }
+100% { transform: translateX(0); }
+  }
+
+@keyframes sdesna {
+0% { transform: translateX(300px); }
+100% { transform: translateX(0); }
+      }
+
+     
+@keyframes mrdaj {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(15deg); }
+      50% { transform: rotate(0deg); }
+      75% { transform: rotate(-15deg); }
+      100% { transform: rotate(0deg); }
+    }
