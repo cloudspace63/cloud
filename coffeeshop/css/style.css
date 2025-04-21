@@ -91,7 +91,7 @@
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    z-index: 1;
+    z-index: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,31 +109,6 @@ background-size: cover;
 p::after {
     content:"*";
 }; */
-.Onama {
-    display: flex;
-    font-size: 3rem;
-    color: white;
-    text-align: center;
-    text-wrap:wrap;
-    font-family:"Lucy";
-
-}
-.naslov1 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9)); /* Gradient to darken the background */
-    color: white; /* White text for visibility */
-    padding: 2rem; /* Add padding for spacing around text */
-    text-align: center; /* Center-align the text */
-    box-sizing: border-box; /* Ensure padding doesn’t affect width */
-    width: 100%; /* Make sure it takes full width of its container */
-    height: 100%; /* Ensure it takes full height of its container */
-    padding: 6rem; /* Add padding for spacing around text */
-
-
-}
 
 .kolona {
     /* left:0.5rem; */
@@ -246,3 +221,88 @@ font-size: 1.5rem;
       75% { transform: rotate(-15deg); }
       100% { transform: rotate(0deg); }
     }
+
+
+/* O NAMA STRANICA */
+
+    .Onama {
+        display: flex;
+        font-size: 3rem;
+        color: white;
+        text-align: center;
+        text-wrap:wrap;
+        font-family:"Lucy";
+        animation: pojavise 1.5s ease-in 1.5s ease;
+        /* opacity: 0; */
+        /* font-weight:bold; */
+        
+    
+    }
+    .naslov1 {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.7));
+        opacity:0;
+        color: white; /* White text for visibility */
+        padding: 2rem; /* Add padding for spacing around text */
+        text-align: center; /* Center-align the text */
+        box-sizing: border-box; /* Ensure padding doesn’t affect width */
+        width: 100%; /* Make sure it takes full width of its container */
+        height: 100%; /* Ensure it takes full height of its container */
+        padding: 6rem; /* Add padding for spacing around text */
+        animation:potamni 3s ease-in forwards;
+        z-index: 1;
+       
+      
+    
+    
+    }
+    
+    .naslov2 h1   {
+        font-size: 6.5rem;
+         color: white;
+         text-align: center;
+         font-family:'Awesome';
+         letter-spacing: 1rem;
+         line-height: 7rem;
+         opacity: 0;
+         text-shadow: 0 0 8px  #3e2723, 0 0 20px  #3e2723;
+         animation: nestani 1.5s ease;
+         /* z-index: 20; */
+         
+         
+        }
+.naslov2 {
+        
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index:99;
+       
+}
+
+@keyframes nestani {
+    0% { opacity: 1; }
+    100% { opacity: 0; filter: blur(5px); }
+}
+  
+@keyframes potamni {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
+ @keyframes pojavise {
+    0% {
+      opacity: 0;
+      /* transform: scale(1) translateY(0); */
+      /* filter: blur(0);  */
+    }
+    100% {
+      opacity: 1;
+      /* transform: scale(0.2) translateY(5px); shrink + drop */
+      filter: blur(2px); 
+     }
+  }
