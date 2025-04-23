@@ -197,9 +197,9 @@ font-size: 1.5rem;
 #kafeno {
     animation: sleva 1s ease-out; /* Ja zadam ime animacije */
 }
-#carstvo {
+#carstvo { 
 
-    animation: sdesna 1s ease-out; /* Ja zadam ime animacije */
+    animation: sdesna 1s ease-out;
 }
 
 
@@ -306,3 +306,82 @@ font-size: 1.5rem;
       filter: blur(2px); 
      }
   }
+
+
+  /* testiram da li ce raditi animacija u JS */
+/* Keyframe for steam bubble animation */
+@keyframes steam {
+    0% {
+      opacity: 0;
+      transform: translateY(0) scale(0.5);
+    }
+    50% {
+      opacity: 0.5;
+      transform: translateY(-20px) scale(1);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(-40px) scale(1.5);
+    }
+  }
+  
+
+  #kafeno.active .bubble, #carstvo.active .bubble {
+    animation: steam 2s infinite;
+    animation-delay: calc(0.1s * var(--i));
+  }
+  
+  
+  /* Bubble style */
+  .bubble {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  
+  /* Animation for fading and boiling text on hover */
+  @keyframes fadeBoil {
+    0% {
+      opacity: 1;
+      transform: scale(1);
+      filter: blur(0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.2);
+      filter: blur(2px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(2);
+      filter: blur(5px);
+    }
+  }
+  
+  /* Apply the fadeBoil effect on hover */
+  #kafeno.active, #carstvo.active {
+    animation: fadeBoil 3s ease-in-out forwards;
+  }
+  
+  
+  /* Randomize bubble sizes and positions on hover */
+  #kafeno:hover .bubble:nth-child(1) { top: 10%; left: 20%; width: 25px; height: 25px; }
+  #kafeno:hover .bubble:nth-child(2) { top: 15%; left: 30%; width: 22px; height: 22px; }
+  #kafeno:hover .bubble:nth-child(3) { top: 25%; left: 40%; width: 28px; height: 28px; }
+  #kafeno:hover .bubble:nth-child(4) { top: 30%; left: 50%; width: 20px; height: 20px; }
+  #kafeno:hover .bubble:nth-child(5) { top: 35%; left: 60%; width: 35px; height: 35px; }
+  #kafeno:hover .bubble:nth-child(6) { top: 40%; left: 70%; width: 24px; height: 24px; }
+  #kafeno:hover .bubble:nth-child(7) { top: 50%; left: 80%; width: 30px; height: 30px; }
+  
+  /* Repeat similar for carstvo */
+  #carstvo:hover .bubble:nth-child(1) { top: 10%; left: 20%; width: 25px; height: 25px; }
+  #carstvo:hover .bubble:nth-child(2) { top: 15%; left: 30%; width: 22px; height: 22px; }
+  #carstvo:hover .bubble:nth-child(3) { top: 25%; left: 40%; width: 28px; height: 28px; }
+  #carstvo:hover .bubble:nth-child(4) { top: 30%; left: 50%; width: 20px; height: 20px; }
+  #carstvo:hover .bubble:nth-child(5) { top: 35%; left: 60%; width: 35px; height: 35px; }
+  #carstvo:hover .bubble:nth-child(6) { top: 40%; left: 70%; width: 24px; height: 24px; }
+  #carstvo:hover .bubble:nth-child(7) { top: 50%; left: 80%; width: 30px; height: 30px; }
